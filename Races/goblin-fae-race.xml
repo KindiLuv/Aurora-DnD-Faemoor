@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Goblin Faes</name>
+		<description></description>
+		<author> KindiLuv </author>
+		<update version="1.0">
+			<file name="goblin-fae-race.xml" url="https://raw.githubusercontent.com/KindiLuv/Aurora-DnD-Faemoor/master/Races/goblin-fae-race.xml" />
+		</update>
+	</info>
+	<element name="Goblin Fae" type="Race" source="Path To Faemoor" id="ID_LUV_RACE_GOBLIN">
+		<description>
+			<p class="flavor"></p>
+			<p class="indent"></p>
+			<h4>APPARENCE</h4>
+			<p></p>
+			<h4>GOBLIN FAE TRAITS</h4>
+			<p>A goblinoid race where the many personnalities of these people only equal their love for quirky dressups.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your dexterity ability score is increased by 1.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Goblins reach adulthood at 18 years old and can live up to 300 years.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Goblins tend to be chaotic But it is also commoin to meet goblins with strict set of rules and decorum.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Goblins are usually a meter tall and weigh an average of 50 kilos. Your Size is Small.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base movement speed is 25ft.</p>
+			<p class="indent"><strong><em>Low-Light Vision.</em></strong> As a nocturnal race, you have superior vision in dim conditions. You can see in dim light within 60 feet of you as if it were bright light.</p>
+			<p class="indent"><strong><em>Social Mimetism.</em></strong> You are proficient in the Persuasion and Deception skills.</p>
+			<p class="indent"><strong><em>Colorful Empathy.</em></strong> You can communicate simple ideas throughout the use of textiles or paint to animals, giving you advantage on all Animal handling checks using this technique.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common.</p>
+			<p class="indent"><strong><em>Subrace.</em></strong>  You are a member of one of a few distinct breeds of goblins: Molligan, or Drann. Choose one of these subraces.</p>
+		</description>
+		<sheet display="false"/>
+		<setters>
+			<set name="names" type="male">BoBort, Alaliera, Guguroux, Klklush</set>
+			<set name="names-format">{{name}}</set>
+			<set name="height" modifier="2d10">3’2"</set>
+			<set name="weight" modifier="2d4">100 lb.</set>
+		</setters>
+		<rules>
+			<stat name="dexterity" value="1"/>
+			<stat name="innate speed" value="25" bonus="base"/>
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+			<grant type="Size" id="ID_SIZE_SMALL" />
+			<grant type="Language" id="ID_LANGUAGE_COMMON" />
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_LOW_LIGHT_VISION" />
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_SOCIAL_MIMETISM" />
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_COLORFUL_EMPATHY" />
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_GOBLIN_SUBRACE" />
+		</rules>
+	</element>
+	<element name="Low-light Vision" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_LOW_LIGHT_VISION">
+		<description>
+			<p>As a nocturnal race, you have superior vision in dim conditions. Youcan see in dim light within 60 feet of you as if it were bright light.</p>
+		</description>
+		<sheet>
+			<description>As a nocturnal race, you have superior vision in dim conditions. Youcan see in dim light within 60 feet of you as if it were bright light.</description>
+		</sheet>
+	</element>
+	<element name="Social Mimetism" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_SOCIAL_MIMETISM">
+		<description>
+			<p>You are proficient in the Persuasion and Deception skills.</p>
+		</description>
+		<sheet display="false">
+			<description>You are proficient in the Persuasion and Deception skills.</description>
+		</sheet>
+		<rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+		</rules>
+	</element>
+	<element name="Colorful Empathy" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_COLORFUL_EMPATHY">
+		<description>
+			<p>You can communicate simple ideas throughout the use of textiles or paint to animals, giving you advantage on all Animal handling checks using this technique.</p>
+		</description>
+		<sheet>
+			<description>You can communicate simple ideas throughout the use of textiles or paint to animals, giving you advantage on all Animal handling checks using this technique.</description>
+		</sheet>
+	</element>
+	<element name="Subrace" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_GOBLIN_SUBRACE">
+		<description>
+			<p>YYou are a member of one of a few distinct breeds of goblins: Molligan, or Drann. Choose one of these subraces.</p>
+		</description>
+		<sheet display="false">
+			<description>You are a member of one of a few distinct breeds of goblins: Molligan, or Drann. Choose one of these subraces.</description>
+		</sheet>
+		<rules>
+			<select type="Sub Race" name="Goblin Fae Subrace" supports="Goblin Fae" />
+		</rules>
+	</element>
+
+
+	<element name="Molligan" type="Sub Race" source="Path To Faemoor" id="ID_SUB_RACE_MOLLIGAN_GOBLIN">
+		<supports>Goblin Fae</supports>
+		<description>
+			<p>The social and quirky side of goblins. They are known to be hard to convince once they have an idea in mind, even if the idea usually is about clothings.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Charisma score increases by 2.</p>
+			<p class="indent"><strong><em>An absolute Drama Queen.</em></strong> You are proficient in the Performance skill.</p>
+			<p class="indent"><strong><em>Graceful Explorers.</em></strong> Your know an extra language which you can read, write and speak.</p>
+			<p class="indent"><strong><em>Overdressed.</em></strong> You have resistance to Slashing damage.</p>
+		</description>
+		<setters>
+			<set name="height" modifier="2d10">3'2"</set>
+			<set name="weight" modifier="2d4">100 lb.</set>
+		</setters>
+		<rules>
+			<stat name="charisma" value="2" />
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_CATLIKE_DRAMA_QUEEN"/>
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_GRACEFUL_EXPLORER"/>
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_FIESTY_HARDHEAD"/>
+		</rules>
+	</element>
+
+	<element name="An absolute Drama Queen" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_CATLIKE_DRAMA_QUEEN">
+		<description>
+			<p>You are proficient in the Performance skill.</p>
+		</description>
+		<sheet display="false">
+			<description>You are proficient in the Performance skill.</description>
+		</sheet>
+		<rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+		</rules>
+	</element>
+	<element name="Graceful Explorers" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_GRACEFUL_EXPLORER">
+		<description>
+			<p>Your know an extra language which you can read, write and speak.</p>
+		</description>
+		<sheet>
+			<description>Your know an extra language which you can read, write and speak.</description>
+		</sheet>
+	</element>
+    <element name="Overdressed" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_FIESTY_HARDHEAD">
+		<description>
+			<p>You have resistance to Slashing damage.</p>
+		</description>
+		<sheet>
+			<description>You have resistance to Slashing damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Drann" type="Sub Race" source="Path To Faemoor" id="ID_SUB_RACE_DRANN_GOBLIN">
+		<supports>Goblin Fae</supports>
+		<description>
+			<p>The more mystic and wild side of goblins. They all have a personnal mask that grow with them. The different details on the mask are the reflection of the wearer's personnality.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2.</p>
+			<p class="indent"><strong><em>Real Trudges.</em></strong> Your base movement speed is 35ft.</p>
+			<p class="indent"><strong><em>Masks of Wonder.</em></strong> You are proficient in the Arcana skill.</p>
+			<p class="indent"><strong><em>Bite.</em></strong> You may use an action to bite a target, on a hit you deal 1d6 + your proficiency bonus.</p>
+		</description>
+		<setters>
+			<set name="height" modifier="2d8">3'2"</set>
+			<set name="weight" modifier="2d6">100 lb.</set>
+		</setters>
+		<rules>
+			<stat name="intelligence" value="2" />
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_REAL_TRUDGES"/>
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_MASK_WONDERS"/>
+			<grant type="Racial Trait" id="ID_LUV_RACIAL_TRAIT_BITE"/>
+		</rules>
+	</element>
+
+	<element name="Real Trudges" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_REAL_TRUDGES">
+		<description>
+			<p>Your base movement speed is 35ft.</p>
+		</description>
+		<sheet>
+			<description>Your base movement speed is 35ft.</description>
+		</sheet>
+        <rules>
+            <stat name="innate speed" value="35" bonus="base" />
+        </rules>
+	</element>
+	<element name="Masks of Wonder" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_MASK_WONDERS">
+		<description>
+			<p> You are proficient in the Arcana skill.</p>
+		</description>
+		<sheet display="false">
+			<description> You are proficient in the Arcana skill.</description>
+		</sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+		</rules>
+	</element>
+	<element name="Bite" type="Racial Trait" source="Path To Faemoor" id="ID_LUV_RACIAL_TRAIT_BITE">
+		<description>
+			<p>You may use an action to bite a target, on a hit you deal 1d6 + your proficiency bonus.</p>
+		</description>
+		<sheet>
+			<description>You may use an action to bite a target, on a hit you deal 1d6 + your proficiency bonus.</description>
+		</sheet>
+	</element>
+</elements>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="1.0">
+			<file name="sources.xml" url="https://raw.githubusercontent.com/KindiLuv/Aurora-DnD-Faemoor/master/pathtofaemoor-source.xml" />
+		</update>
+	</info>
+	<element name="Path To Faemoor" type="Source" source="Core" id="ID_ILY_BOOK">
+		<description>
+            <![CDATA[<p>Kindiluv's homebrew fae plane for DnD 5th edition]]>
+		</description>
+		<setters>
+			<set name="abbreviation">LUV</set>
+			<set name="url">https://github.com/KindiLuv/Aurora-DnD-Faemoor</set>
+			<set name="image">https://cdn.pastemagazine.com/www/articles/yawning%20portal%20main.jpg</set>
+			<set name="author" abbreviation="LUV" url="https://github.com/KindiLuv">KindiLuv</set>
+			<set name="release">2023</set>
+		</setters>
+	</element>
+</elements>

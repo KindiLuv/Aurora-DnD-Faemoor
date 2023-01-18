@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <update version="1.0">
+      <file name="pathtofaemoor.index" url="https://raw.githubusercontent.com/KindiLuv/Aurora-DnD-Faemoor/master/pathtofaemoor.index" />
+    </update>
+  </info>
+  <files>
+    <file name="pathtofaemoor-source.xml" url="https://raw.githubusercontent.com/KindiLuv/Aurora-DnD-Faemoor/master/pathtofaemoor-source.xml"/>
+    <file name="goblin-fae-race.xml" url="https://raw.githubusercontent.com/KindiLuv/Aurora-DnD-Faemoor/master/Races/goblin-fae-race.xml" />
+  </files>
+</index>
